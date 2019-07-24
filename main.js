@@ -27,13 +27,17 @@ for(let i = 0; i <= places.length; i++){
 
 // A group checked the places left but only the ones that didn't end with an `O`. Now we know that the place where the treasure is hidden ends with an `O`, so write the code that makes the array to be left with only the places that end with an `O`.
 
-for (let i = 0; i <= places.length; i++){
-    if(places[i].length !== 'o' ){
-        console.log(places[i])
+const newPlaces = [];
+
+for (let i = 0; i < places.length; i++){
+    let lastChar = places[i].length -1;
+
+    if(places[i][lastChar] === 'o'){
+        newPlaces.push(lastChar[i])
     }
-
+    
 }
-
+console.log(newPlaces[i])
 // Only a King can open the treasure because the place starts with a `K`.  Now that we know with what it starts and what it ends we can find the place. Write the code to find the place and and `console.log` that place!
 
 
